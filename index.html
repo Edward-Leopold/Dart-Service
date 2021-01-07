@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/icon-font.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>Dart Service Manager</title>
+</head>
+<body>
+
+
+<!-- начальная секция ( интро )
+======================================================================================================================================================== -->
+	<section class="intro">
+		<!-- подложение картинки на задний фон -->
+		<div class="bg-img"></div>
+			<!-- Header
+			======================================================================================================================================================== -->
+
+			<header id="headerPanel" class="header">
+				<div class="hd-content">
+					<div class="wrap">
+						<div class="hd-flex">
+							<div class="logo">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="30" viewBox="0 0 180 30">
+								  <image id="Dart_service_manager" data-name="Dart service manager" width="180" height="30" xlink:href="data:img/png;base64,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"/>
+								</svg>
+							</div>
+
+							<nav class="hd-nav">
+								<a class="hd-nav__link" href="#">Home</a>
+								<a class="hd-nav__link hd-nav__link_active" href="#">Service</a>
+								<a class="hd-nav__link" href="#">Extension</a>
+								<a class="hd-nav__link" href="#">Pricing</a>
+								<a class="hd-nav__link" href="#">Help</a>
+							</nav>
+
+							<div class="hd-btn">
+								<button class="sec-btn">sign up</button>
+							</div>
+
+							<!-- бургер -->
+							<div id="burger" class="burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+
+						
+					</div>
+
+					<!-- бургер меню -->
+					<div id="burger-menu" class="burger-menu">
+						<nav class="hd-nav">
+							<a class="hd-nav__link" href="#">Home</a>
+							<a class="hd-nav__link hd-nav__link_active" href="#">Service</a>
+							<a class="hd-nav__link" href="#">Extension</a>
+							<a class="hd-nav__link" href="#">Pricing</a>
+							<a class="hd-nav__link" href="#">Help</a>
+
+							<a class="hd-nav__link" href="#">Home</a>
+							<a class="hd-nav__link hd-nav__link_active" href="#">Service</a>
+							<a class="hd-nav__link" href="#">Extension</a>
+							<a class="hd-nav__link" href="#">Pricing</a>
+							<a class="hd-nav__link" href="#">Help</a>
+
+							<a class="hd-nav__link" href="#">Home</a>
+							<a class="hd-nav__link hd-nav__link_active" href="#">Service</a>
+							<a class="hd-nav__link" href="#">Extension</a>
+							<a class="hd-nav__link" href="#">Pricing</a>
+							<a class="hd-nav__link" href="#">Help</a>
+
+							<a class="hd-nav__link" href="#">Home</a>
+							<a class="hd-nav__link hd-nav__link_active" href="#">Service</a>
+							<a class="hd-nav__link" href="#">Extension</a>
+							<a class="hd-nav__link" href="#">Pricing</a>
+							<a class="hd-nav__link" href="#">Help</a>
+
+							<a class="hd-nav__link" href="#">Home</a>
+							<a class="hd-nav__link hd-nav__link_active" href="#">Service</a>
+							<a class="hd-nav__link" href="#">Extension</a>
+							<a class="hd-nav__link" href="#">Pricing</a>
+							<a class="hd-nav__link" href="#">Help</a>
+						</nav>
+
+						<div class="hd-btn">
+							<button class="sec-btn">sign up</button>
+						</div>
+					</div>
+				</div>
+				
+			</header>
+
+			<!-- контент в интро
+			======================================================================================================================================================== -->
+
+			<div class="wrap">	
+				<div class="intro-content">
+					<div class="intro-text">
+						<h1 class="intro__title">lorem Ipsum Dolor sit amet</h1>
+						<p class="intro__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div class="intro-links">
+							<a class="main-btn main-btn_blue" href="#">Buy now</a>
+							<a class="main-btn main-btn_white" href="#">Try for free</a>
+						</div>
+					</div>
+					<div class="intro-video">
+						<div class="video-box">
+							<video class="video" width="100%" height="100%" controls>
+								<source src="video/vid1.mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</section>
+
+<!-- особенности
+======================================================================================================================================================== -->
+
+	<section class="features">
+		<div class="wrap">
+			<div class="title-set">
+				<h2 class="title-set__h2">Easy & Useful</h2>
+				<h3 class="title-set__h3">Project Management Tool</h3>
+				<p class="title-set__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+			</div>
+
+			<div class="features-flex">
+				<div class="features-flex-item">
+					<div class="features-flex-item__img">
+						<img src="img/calend.svg" alt="feature_img">
+					</div>
+					<h4 class="features-flex-item__title">Title Goes Here</h4>
+					<p class="features-flex-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="features-flex-item">
+					<div class="features-flex-item__img">
+						<img src="img/calend.svg" alt="feature_img">
+					</div>
+					<h4 class="features-flex-item__title">Title Goes Here</h4>
+					<p class="features-flex-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="features-flex-item">
+					<div class="features-flex-item__img">
+						<img src="img/calend.svg" alt="feature_img">
+					</div>
+					<h4 class="features-flex-item__title">Title Goes Here</h4>
+					<p class="features-flex-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+
+			
+			<div class="center">
+				<a href="#" class="main-btn main-btn_green main-btn_center" >Get started</a>
+			</div>
+		</div>
+	</section>
+
+<!-- Достижения (ACHIVEMENTS)
+======================================================================================================================================================== -->
+
+	<section class="achive">
+		<div class="achive-flex">
+			<div class="achive-item achive-item_1">
+				<div class="achive__img">
+					<img src="img/icon-down.png" alt="icon">
+				</div>
+				<div class="achive__text">
+					<p class="achive__p">12000+</p>
+					<p class="achive__p">Business</p>
+				</div>
+			</div>
+
+			<div class="achive-item achive-item_2">
+				<div class="achive__img">
+					<img src="img/icon-down.png" alt="icon">
+				</div>
+				<div class="achive__text">
+					<p class="achive__p">60000+</p>
+					<p class="achive__p">Downloads</p>	
+				</div>
+			</div>
+		
+			<div class="achive-item achive-item_3">
+				<div class="achive__img">
+					<img src="img/icon-down.png" alt="icon">
+				</div>
+				<div class="achive__text">
+					<p class="achive__p">30000+</p>
+					<p class="achive__p">Free Installs</p>	
+				</div>
+			</div>
+		
+			<div class="achive-item  achive-item_4">
+				<div class="achive__img">
+					<img src="img/icon-down.png" alt="icon">
+				</div>
+				<div class="achive__text">
+					<p class="achive__p">40000+</p>
+					<p class="achive__p">Pro Users</p>	
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- УСЛУГИ (SERVICES)
+======================================================================================================================================================== -->
+
+	<section class="services">
+		<div class="wrap">
+			<div class="title-set">
+				<h2 class="title-set__h2">Services</h2>
+				<p class="title-set__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+			</div>
+
+			<!-- Аккордеон -->
+			<div class="accordeon">
+				<div class="accordeon-item">
+
+					<input id="accor1" type="checkbox" class="accordeon-input">
+
+					<div class="accordeon-content">
+						<label for="accor1" class="accordeon-head">
+							<!-- значок -->
+							<div class="accordeon-head__img">
+								<img src="img/6.png" alt="icon">
+							</div>
+							<!-- заголовок -->
+							<h4 class="accordeon-head__title">
+								Statistics
+							</h4>
+						</label>
+
+						<div class="accordeon-body">
+							<img class="accordeon-body__img"  src="img/accor-img.jpg" alt="picture">
+
+							<div class="accordeon-body-text">
+								<p class="accordeon-body-text__p">			
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="accordeon-item">
+
+					<input id="accor2" type="checkbox" class="accordeon-input">
+
+					<div class="accordeon-content">
+						<label for="accor2" class="accordeon-head">
+							<!-- значок -->
+							<div class="accordeon-head__img">
+								<img src="img/7.png" alt="icon">
+							</div>
+							<!-- заголовок -->
+							<h4 class="accordeon-head__title">
+								inbox
+							</h4>
+						</label>
+
+						<div class="accordeon-body">
+							<img class="accordeon-body__img"  src="img/accor-img.jpg" alt="picture">
+
+							<div class="accordeon-body-text">
+								<p class="accordeon-body-text__p">			
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="accordeon-item">
+
+					<input id="accor3" type="checkbox" class="accordeon-input">
+
+					<div class="accordeon-content">
+						<label for="accor3" class="accordeon-head">
+							<!-- значок -->
+							<div class="accordeon-head__img">
+								<img src="img/8.png" alt="icon">
+							</div>
+							<!-- заголовок -->
+							<h4 class="accordeon-head__title">
+								team
+							</h4>
+						</label>
+
+						<div class="accordeon-body">
+							<img class="accordeon-body__img"  src="img/accor-img.jpg" alt="picture">
+
+							<div class="accordeon-body-text">
+								<p class="accordeon-body-text__p">			
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="accordeon-item">
+
+					<input id="accor4" type="checkbox" class="accordeon-input">
+
+					<div class="accordeon-content">
+						<label for="accor4" class="accordeon-head">
+							<!-- значок -->
+							<div class="accordeon-head__img">
+								<img src="img/9.png" alt="icon">
+							</div>
+							<!-- заголовок -->
+							<h4 class="accordeon-head__title">
+								settings
+							</h4>
+						</label>
+
+						<div class="accordeon-body">
+							<img class="accordeon-body__img"  src="img/accor-img.jpg" alt="picture">
+
+							<div class="accordeon-body-text">
+								<p class="accordeon-body-text__p">			
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</p>
+								<p class="accordeon-body-text__p">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="accordeon-item">
+
+					<input id="accor5" type="checkbox" class="accordeon-input">
+
+					<div class="accordeon-content">
+						<label for="accor5" class="accordeon-head">
+							<!-- значок -->
+							<div class="accordeon-head__img">
+								<img src="img/10.png" alt="icon">
+							</div>
+							<!-- заголовок -->
+							<h4 class="accordeon-head__title">
+								feed
+							</h4>
+						</label>
+
+						<div class="accordeon-body">
+							<img class="accordeon-body__img"  src="img/accor-img.jpg" alt="picture">
+
+							<div class="accordeon-body-text">
+								<p class="accordeon-body-text__p">			
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</p>
+								<p class="accordeon-body-text__p">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quod sint harum quis dolorem ipsam reiciendis illo porro at, autem tenetur saepe. Ut impedit quasi neque et accusantium, deserunt, debitis!
+									Fugiat maiores recusandae rem esse porro accusamus exercitationem, dolorum dignissimos, temporibus magnam nam veniam fugit, modi, cupiditate asperiores blanditiis ducimus reprehenderit laboriosam nobis. Tempore consequatur aperiam porro necessitatibus qui fuga.
+									Vero temporibus quam recusandae molestiae sint non, enim consectetur dolorem praesentium ducimus cum expedita consequatur minus? Repellat expedita et est magnam voluptatem laudantium asperiores mollitia suscipit non corrupti odio, eaque?
+									Earum nobis voluptatum temporibus aliquid eius vitae est voluptates vero nihil voluptatibus nesciunt necessitatibus, deleniti labore exercitationem qui, possimus velit rem iste. Non aut illo omnis quia, aperiam dicta. Debitis?
+									Alias at corrupti doloribus quidem, ab natus recusandae. Excepturi vel, quia! Doloremque nobis placeat, maxime esse possimus tempore pariatur rem quibusdam molestias laboriosam eum nisi natus sed ducimus. Laudantium, dolorum?
+									At ut pariatur, nulla iste quidem dolore animi nisi consectetur aliquam ducimus deleniti. Nulla commodi quam porro qui ipsam error, accusantium, corrupti harum, laborum dolorum excepturi esse maiores consequuntur, ipsum.
+									Pariatur optio, a eligendi. Quam, delectus neque et repudiandae quo corporis soluta non incidunt nihil dignissimos officia magni voluptas ut. Distinctio officiis fuga repellendus, illo non saepe consequatur beatae obcaecati.
+									Iure similique obcaecati dolor qui, vitae quibusdam beatae. Quas nam atque, consectetur velit ea, ipsum veniam, magnam maxime, odio laudantium aspernatur cumque deserunt. Nostrum dolor modi consequatur vero facere provident.
+									Quod distinctio possimus nam perferendis ad debitis impedit, aut provident quibusdam earum inventore nesciunt eos animi at. Pariatur odit cumque distinctio neque sed, totam corporis, iusto enim quidem officia voluptas!
+									Eum, laudantium. Quidem eos voluptates perferendis odit ipsam sequi quos necessitatibus quod sed omnis. Facilis ipsa aut quam magnam at? Tempore quasi pariatur praesentium cupiditate nihil quis. Accusantium dicta, aspernatur!
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+<!-- ОТЗЫВЫ (REVIEWS) слайдер
+======================================================================================================================================================== -->
+
+	<section class="reviews">
+		<div class="bg-img"></div>
+		<div class="wrap">
+			<div class="reviews-flex">
+				<div class="reviews-flex-item reviews-flex-item_text">
+					<div class="title-set">
+						<h2 class="title-set__h2">What our customers have to say about us.</h2>
+						<p class="title-set__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+					</div>
+
+					<a class="main-btn main-btn_blue" href="#">Get started</a>
+				</div>
+
+				<div id="slider" class="reviews-flex-item reviews-flex-item_slider">
+
+					<div class="slider-item">
+						<div>
+							<img src="img/reviewer.jpg" alt="pic" class="slider-item__img">
+
+							<div class="slider-item-text">
+								<h5 class="slider-item-text__name">
+									John Doe
+								</h5>
+								<p class="slider-item-text__p">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="slider-item">
+						<div>
+							<img src="img/reviewer.jpg" alt="pic" class="slider-item__img">
+
+							<div class="slider-item-text">
+								<h5 class="slider-item-text__name">
+									Khalessi
+								</h5>
+								<p class="slider-item-text__p">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="slider-item">
+						<div>
+							<img src="img/reviewer.jpg" alt="pic" class="slider-item__img">
+
+							<div class="slider-item-text">
+								<h5 class="slider-item-text__name">
+									John Doe
+								</h5>
+								<p class="slider-item-text__p">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="slider-item">
+						<div>
+							<img src="img/reviewer.jpg" alt="pic" class="slider-item__img">
+
+							<div class="slider-item-text">
+								<h5 class="slider-item-text__name">
+									John Doe
+								</h5>
+								<p class="slider-item-text__p">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="slider-item">
+						<div>
+							<img src="img/reviewer.jpg" alt="pic" class="slider-item__img">
+
+							<div class="slider-item-text">
+								<h5 class="slider-item-text__name">
+									John Doe
+								</h5>
+								<p class="slider-item-text__p">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- КОМАНДА (TEAM)
+======================================================================================================================================================== -->
+
+	<section class="team">
+		<div class="wrap">
+			<div class="title-set">
+				<h2 class="title-set__h2">Our Team</h2>
+				<p class="title-set__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+			</div>
+
+			<div class="team-slider">
+				<!-- пролистывание фотографий -->
+				<div class="team-photo-slider">
+					<div class="team-photo-slider-item">
+						<img src="img/reviewer.jpg" alt="pic" class="team-photo-slider-item__img">
+					</div>
+					<div class="team-photo-slider-item">
+						<img src="img/accor-img.jpg" alt="pic" class="team-photo-slider-item__img">
+					</div>
+
+					<div class="team-photo-slider-item">
+						<img src="img/reviewer.jpg" alt="pic" class="team-photo-slider-item__img">
+					</div>
+
+					<div class="team-photo-slider-item">
+						<img src="img/accor-img.jpg" alt="pic" class="team-photo-slider-item__img">
+					</div>
+					<div class="team-photo-slider-item">
+						<img src="img/reviewer.jpg" alt="pic" class="team-photo-slider-item__img">
+					</div>
+
+					<div class="team-photo-slider-item">
+						<img src="img/accor-img.jpg" alt="pic" class="team-photo-slider-item__img">
+					</div>
+				</div>
+
+				<!-- пролистывание информации -->
+				<div class="team-info-slider">
+					<div class="team-info-slider-item">
+						<h5 class="team-info-slider-item__name">Sophie Turner</h5>
+						<p class="team-info-slider-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+						<!-- соц сети -->
+						<ul class="team-info-slider-item__social">
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-linkedin-in"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-vk"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-behance"></i></a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="team-info-slider-item">
+						<h5 class="team-info-slider-item__name">mickael johnson</h5>
+						<p class="team-info-slider-item__p">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nostrum modi sapiente rerum optio velit commodi accusamus, ipsam unde provident odio repudiandae nobis odit dolorem ea, magnam hic ipsum. Nostrum?
+						 Aspernatur asperiores nisi eaque hic dicta. Accusamus, placeat? Voluptate est sit quibusdam ipsa possimus quia omnis dolor reprehenderit facere praesentium eos, quasi iste voluptatum dolorum ratione odio, sequi minima consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+						<!-- соц сети -->
+						<ul class="team-info-slider-item__social">
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-linkedin-in"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-vk"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-behance"></i></a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="team-info-slider-item">
+						<h5 class="team-info-slider-item__name">Sophie Turner</h5>
+						<p class="team-info-slider-item__p">
+							Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Sit fugit nam, iusto vel eligendi deserunt quasi veritatis? Reiciendis iste doloribus ratione facere itaque repellat libero aut, ducimus qui id voluptates.
+							Ut cupiditate odit deserunt fugit. Tempora doloremque repudiandae perspiciatis illo fugiat asperiores? Suscipit possimus illo magni labore amet eveniet consectetur, quod debitis accusantium, corrupti voluptatibus fugit. Ratione voluptatum animi porro!
+							Veniam autem suscipit quasi quae minima totam nobis at esse illum excepturi. In, recusandae iusto placeat aperiam, similique praesentium? Dolores perspiciatis, facere beatae quasi architecto praesentium magnam repellat ex ducimus.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+						<!-- соц сети -->
+						<ul class="team-info-slider-item__social">
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-linkedin-in"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-vk"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-behance"></i></a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="team-info-slider-item">
+						<h5 class="team-info-slider-item__name">james green</h5>
+						<p class="team-info-slider-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+						<!-- соц сети -->
+						<ul class="team-info-slider-item__social">
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-linkedin-in"></i></a>
+							</li>
+							
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-behance"></i></a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="team-info-slider-item">
+						<h5 class="team-info-slider-item__name">sarah ourner</h5>
+						<p class="team-info-slider-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+						<!-- соц сети -->
+						<ul class="team-info-slider-item__social">
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+							</li>
+							
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-behance"></i></a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="team-info-slider-item">
+						<h5 class="team-info-slider-item__name">Sophie Turner</h5>
+						<p class="team-info-slider-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+						<!-- соц сети -->
+						<ul class="team-info-slider-item__social">
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-linkedin-in"></i></a>
+							</li>
+							<li>
+								<a href=""><i class="team-info-slider-item__social-icon fab fa-vk"></i></a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- КОНТАКТЫ (CONTACTS)
+======================================================================================================================================================== -->
+
+	<section class="contacts">
+		<div class="wrap">
+			<div class="title-set">
+				<h2 class="title-set__h2">Contact Us</h2>
+				<p class="title-set__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+			</div>
+
+			<form class="contacts-form" action="">
+
+				<input class="input-small" type="text" placeholder="First Name">
+				<input class="input-small" type="text" placeholder="Last Name">
+				<input class="input-small" type="email" placeholder="Email">
+				<input class="input-small" type="tel" placeholder="Phone">
+
+				<textarea class="textarea-big" id="" placeholder="Message"></textarea>
+
+				<label class="con-checkbox"><input type="checkbox"> subscribe to the newsletter</label>
+				<button class="main-btn main-btn_green">send</button>
+			</form>
+		</div>
+	</section>
+
+<!-- FOOTER
+======================================================================================================================================================== -->
+
+<footer class="footer">
+	<div class="wrap">
+		<section class="footer-section footer-section_1">
+			<div class="logo">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="30" viewBox="0 0 180 30">
+				  <image id="Dart_service_manager" data-name="Dart service manager" width="180" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAAeCAYAAACFSjS6AAAJKUlEQVR4nO1cXaxcVRX+TksQxCq3/PoAwVEUCQFLU6yKIcptBBQeNMNPJIEQuSiJDySSaRRMeDBeMD74opkmWjRBm2mMDyRiM40+EAg0w18JiJB7oQETfu/FFi0S6Ec2XXtmzdprnzMzTLE3ni/ZOWf2Xnudc/Ze59tr773OFCRxCPF5AH8CcAuA3xzKC9WoEXBEkjM9bADwFwDHAjj7g36wGv+nCAxdkVaTvIDkz0neR/Ilkv+V9KLk3UHyXKXnCyRf5wC/rbhGNuHgPXaZYolkK9droUxqNJyy2UTbQfRIrheZhaTUILlojf89coZE8giS15N8JulJHzdKvS+T3Gsk7nL0j2vQQ8YbDE8MsOs1ohika/TRoJ38ltSZMfkNeY7Z5EI1DiusytzMZwE8AGALgE8lpT72SO5VANYYifMBdMSPbgO4ztUwBoqieAjAJgANx9iD4QWjvB3A3Khai6II8svj1KlxeMHzoS8S49NGGdhsl/jEDwNYAvAOgJMArAPw9UTLME6VFLFpGpPEoiiWSYaXriXGG9EEsF1eyMC6zaIoticKfCyGl8QtqXH4wwzxF5H8j3EX/kzybM8dMGm1/P6l65AM8DLJzzn13YSMyxEhrkffVw7ugnYPSLZJdkwd1+XAwFWxjF+7HCsEmqFPB7ANwNHy+00ANwLYqmQCa58H4GQAqwH8U5h7nzB2FV4FEIxid4XcOFg2ssFdWCyKYqf8DswcXohGURSLZXrFkGeE2WusRAgrriL5oGLRN0lerBjzNJJ3ktyf8C35grBikDuZ5NOJxEG8RnKdx8JlCeMztMewQ3klqxzduMph6tcMvUIQGfoaYd6I7wO4R86vBPBrAB92HmkvgG8KS54IYIcw/RMA7jOygfUeSTS8fwQjWw7sKwYXDHue5LzRPGf87OCDF/FcVkuWZbJZY6WCZNgtfEqx1A7FmE2SbxsWC+vPT5DcTfI8kfs4ySel/BGSJ5Sx7rQYWkaGPvsGX9lbxlMM20TGh7YymbKaoQ93kPySMdi4QfIJkvtUfpgs/oDkx4zRnUjy7yKz2xjzkSQvk3QTyTM9oy1LyBi0GGV/HVpNBt0lN9HRQcagMViHXqjXoVcwSP5EGW1PGddWlf9vkuc7hheM+XGR+QfJkyT/OCWzW+m5xdFRmpDfKbR+cXAzFnI9ofzm9TmDxsDfbpu82qBXCkj+VRnJbWJca8SIywwxMPFjUv6ouB1xkraH5FHye17p2eHoKU01aowFWaWI+JYY1wUq7y2SH3WM7gHHzVgnqxkBX5S8K5SuZxw9palGjXGwStZdI56X4ykqb4+sZljsB/AogAsBvCJldwJYK+enyXFJ1VubaKlRY4qwW99HyvFDI1ziK0kOcIw6PyDHtxOpGjUOEQJDv65UHy9HvaN2qhNs5OFYxcoBz8rxBJVnd/VGhoqEi+iYSaE3cYxoV8h04sqGChvt2HuTbXTGiDxV31uBsddq6dWT5A6GkazUqHBYjlsu9xrbzq7P63bxymJ7tJ0yfc0ZW67aolPRFi3msTBq30EM+il1/XPk2JOtbwhrJw3s4LuyHR7wBoDHjM6Ap9Nq1ZDGnDfuUVM2UJJ14wnQlGeG2vZuOp0Ur7UlBEZ5lxHj7sqGj0a4/56jcxLYF2jG5jn3Ha9b1petMdtzLnMe7yu2hdUZ22IaQWC6794z6F2q8FI57pO4jojbAGxMVA0QwkN/rH5vUy/EN1R+L6lZAXno2FibZXcv+OKbAex0ouhCnsUNORkAl0teQ5hN6+t3hApJfa++d9ciE1ku6Fkr19DXt1vrm5O7LYqqWJKGYeE587Jb6JdrpmL5sT2KoUmIgJabNeWjtEVynaQliuKTRqSs79yNlXNU/MYbKj8s491sNlY+IpstOkLvXyRPkfINRveGshWNTNJxF8mQqBowDknJTmGVjB4KjVxHycTlx4UR6iXr4bLr6rkcZcyq69thOQ7FM8YVozZ24xrFod+us9vhvKfKXJdDtYd2JxqOTq8trPH3ny158FRfad8Fhr5fYi8iotE8B+A7KoouxHLcAeBlickIKxyvAfiZitB7R4L342rJT5XeJydhaON3xwfveH7kJMiwVWTpWWWEfXcjkR4g6kpir8NIknNTJsCyYqXIzjndsZ0eqnCnNNZ7c4iM3u1qxNKuRVlbuCPcuHD7Tljx2+YNvVax5VVOjLSHvWodO6TvGZmrMwxcmjDMBhYLKsouN2mgetasjN7yNqzXVBF9NCzUZwe1m8hRXrbk6gO4I4xh6Hi+oBjUnRSqZ46jSP+5HJmuYdyWx9Bq1Fwy99bD8M6qvRcb5bjgPJvFLMbou/gJ1jbDnr8C8DU5/wOAswDcBeCtpKUP5v1OJn9/lLxLAPxCyYRR4PdJzRFRFMVm+crldlOjUTEZGhWB3TZFBpVjZJamYp6duZhqyY8smfiGU8aWyNKSFj0mlJcvspiOD4czUYu4QdgczkQ8ot8eRmd48debNjrUbTHUd5odzxD/N2K/w6rBZ76Q5DXhzZPzNUZmTuKpI8LX36eXsXBZwqBj+hDWjEwTWcH1sUy9IRm514imke2zkMS40FkO6zMZBtF+zPiNU/Oh7e/cCFHBfFQjkm2XhuOXx6VPz2fXmDc6vbaY1WWT+NDZvjPGdIkxxoC7R4ySWyefa2mEieRGR3acFDuqrYYf3agd74E9eDJqSPUaXv+Vgfc1eEQ0aO2adJXBJI1v605g0LEN4pq4Z9DxRexJ/ZbnmmTapWn6su3kzyudQwZs3AvbFktGdqJJodt3jmFdbMJGAw6QvJfkrRIKulH+eyOc/0j+m8MiMPMmR/+4qZ1oHkbTPLCHbkmjaGOzDKw7P5kkqbJWRp+F9vnLkBh5VadbgzYvlx19oqFn2wXp3CUadByFekZWG3oknqoRIjFoD7l7dPsuY1xnkXzY0T0qdpH8tKN3Upej5Rh2NzOx8VDVcf033bgF2kgSn1OVeTuFenK15OyOlWEaBt3f1XRktQE1cu1i2qxtruHdY2RePYFsmr7pKkN8Xwbt9V3Zf9uFOI+rAfxQPqsaBYuyVLd1xI9ma9SYKsoMOiKshHwVwGXy3eFnJG7jgETZPSd/SnM3gL+poKQaNT5YAHgXoHV4jsMoBOQAAAAASUVORK5CYII="/>
+				</svg>
+			</div>
+
+			<nav class="hd-nav">
+				<a class="hd-nav__link" href="#">Home</a>
+				<a class="hd-nav__link" href="#">Service</a>
+				<a class="hd-nav__link" href="#">Extension</a>
+				<a class="hd-nav__link" href="#">Pricing</a>
+				<a class="hd-nav__link" href="#">Help</a>
+			</nav>
+		</section>
+		<section class="footer-section footer-section_2">
+			<ul class="copy-list">
+				<li class="copy-list-item">Privecy Policy</li>
+				<li class="copy-list-item">About Us</li>
+				<li class="copy-list-item">About Us</li>
+			</ul>
+
+			<!-- соц сети -->
+			<ul class="team-info-slider-item__social">
+				<li>
+					<a href=""><i class="team-info-slider-item__social-icon fab fa-twitter"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="team-info-slider-item__social-icon fab fa-facebook-f"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="team-info-slider-item__social-icon fab fa-linkedin-in"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="team-info-slider-item__social-icon fab fa-vk"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="team-info-slider-item__social-icon fab fa-behance"></i></a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</footer>
+
+
+
+<!-- Скрипты -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script>
+		//слайдер для раздела "отзывы"
+		$('#slider').slick({
+		  vertical: true,
+		  verticalSwiping: true,
+		  infinity: true,
+		  arrows: true,
+		  adaptiveHeight: true,
+		  slidesToShow: 2,
+  		  slidesToScroll: 1,
+  		  adaptiveHeight: true,
+  		   responsive: [
+		    {
+		      breakpoint: 1250,
+		      settings: {
+		        slidesToShow: 1,
+		        adaptiveHeight: true
+		      }
+		    }
+		   ]
+		});
+
+		// cлайдер для раздела "команда"
+		 
+		$('.team-photo-slider').slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  asNavFor: '.team-info-slider',
+		  centerMode: true,
+		  centerPadding: '0px',
+		  focusOnSelect: true,
+		  infinity: true,
+		  arrows: false,
+		  centerMode: true
+		});
+
+		$('.team-info-slider').slick({
+		  slidesToShow: 1,
+		  adaptiveHeight: true,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  infinity: true,
+		  fade: true,
+		  asNavFor: '.team-photo-slider'
+		});
+
+
+
+		// fixed header
+
+		 $(window).scroll(function(){
+		  	 const headerOffset = $(".intro").outerHeight();
+		  console.log(headerOffset);
+		  	const scrolled = $(window).scrollTop();
+		  	console.log(scrolled);
+
+		  	if (scrolled > headerOffset) {
+		  		$("#headerPanel").addClass("nav-fixed");
+		  	} else if (scrolled < headerOffset) {
+		  		$("#headerPanel").removeClass("nav-fixed");
+		  	}
+		  });
+
+		 //burger menu
+		 $('#burger').click(function(){
+		 	$("#burger-menu").toggleClass("show");
+		 	$("body").toggleClass("lock");
+		 });
+
+		 $('.hd-nav__link').click(function(){
+		 	$("#burger-menu").removeClass("show");
+		 	$("body").removeClass("lock");
+		 });
+
+	</script>
+</body>
+</html>
